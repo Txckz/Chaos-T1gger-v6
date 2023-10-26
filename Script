@@ -111,7 +111,7 @@ local function Shoot(firstPos,nextPos,Revolver)
 end
 
 
-local Lib = loadstring(game:HttpGet("https://raw.githubusercontent.com/Txckz/Chaos-T1gger/main/UILIB", true))()
+local Lib = loadstring(game:HttpGet("https://raw.githubusercontent.com/Txckz/Chaos-T1gger-v6/main/Gui", true))()
 local Table = {}
 
 local window = Lib:CreateWindow("CHAOS T1gger")
