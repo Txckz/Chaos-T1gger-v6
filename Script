@@ -1015,6 +1015,28 @@ end
 end)
 end)
 
+window:Button("Fire All Spiked Traps",function()
+game.StarterGui:SetCore("SendNotification", {
+    Title = "Active Bind";
+    Text = "KeypadFour (4)";
+    Icon = "http://www.roblox.com/asset/?id=12790890422";
+    Duration = "DURATION IN SECONDS";
+    callback = bindableFunction;
+})
+game:GetService("UserInputService").InputBegan:Connect(function(Input, IsTyping)
+if IsTyping then return end
+if Input.KeyCode == Enum.KeyCode.KeypadTwo then	
+	for _,v in pairs(workspace:GetDescendants()) do
+		if v:IsA("TouchTransmitter") then
+			firetouchinterest(game.Players.LocalPlayer.Character.HumanoidRootPart, v.Parent, -0) --0 is touch
+			task.wait(.01)
+			firetouchinterest(game.Players.LocalPlayer.Character.HumanoidRootPart, v.Parent, 1) -- 1 is untouch
+		end
+	end
+end
+end)
+end)
+
 window:Button("Set Night",function()
 game.Lighting:SetMinutesAfterMidnight(0)
     end)
@@ -1314,16 +1336,19 @@ end
 end)
 end)
 
-window:Button("Invisible pencil",function()
-Workspace.9mmxp.Pencil.Blade:Destroy()
-wait()
-Workspace.9mmxp.Pencil.Handle:Destroy()
-wait()
-Workspace.9mmxp.Pencil:FindFirstChild("Meshes/wooden pencil_Cylinder.002"):Destroy()
-wait()
-Workspace.9mmxp.Pencil:FindFirstChild("Meshes/wooden pencil_Cylinder.003"):Destroy()
-wait()
-Workspace.9mmxp.Pencil:FindFirstChild("Meshes/wooden pencil_Cylinder.004"):Destroy()
+local Pressing = false
+window:Toggle("Anti-Void Tool",{location = Table, flag = "enable"},function()
+    if Pressing then
+        Pressing = false
+    else
+        Pressing = true
+        repeat
+
+game:GetService("VirtualInputManager"):SendKeyEvent(true,Enum.KeyCode.One,false,game) wait(.2)
+            game:GetService("RunService").Heartbeat:Wait()
+        until not Pressing
+    end
+
 end)
 
 local Pressing = false
@@ -1409,7 +1434,7 @@ local Mouse = Player:GetMouse()
 
 
 function GetCharacter()
-   return Workspace.9mmxp.Pencil
+   return Workspace.HelloJesus009.Pencil
 end
 
 function Teleport(pos)
