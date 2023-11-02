@@ -1,3 +1,8 @@
+local UserInputService = game:GetService("UserInputService")
+local Heartbeat = game:GetService("RunService").Heartbeat
+local dupping = false
+local walkSpeed = 16.1
+local plrs = game:GetService'Players'local UserInputService = game:GetService("UserInputService")
 local Heartbeat = game:GetService("RunService").Heartbeat
 local dupping = false
 local walkSpeed = 16.1
@@ -106,7 +111,7 @@ local function Shoot(firstPos,nextPos,Revolver)
 end
 
 
-local Lib = loadstring(game:HttpGet("https://raw.githubusercontent.com/Txckz/Chaos-T1gger/main/UILIB", true))()
+local Lib = loadstring(game:HttpGet("https://raw.githubusercontent.com/Txckz/Chaos-T1gger-v6/main/Gui", true))()
 local Table = {}
 
 local window = Lib:CreateWindow("CHAOS T1gger")
@@ -694,6 +699,11 @@ window:Button("Quick God",function()
 game:GetService("Players").LocalPlayer.Character.PickupRemote:FireServer()
 wait(.5)
 game.Players.LocalPlayer.Character["Torso"]:Destroy()
+
+    Text = "Ur Character is now in void, press P to unfreecam!";
+    Icon = "http://www.roblox.com/asset/?id=12790890422";
+    Duration = "DURATION IN SECONDS";
+    callback = bindableFunction;
 end)
 
 window:Button("Pencil Tp (Click)",function()
@@ -704,7 +714,7 @@ local Mouse = Player:GetMouse()
 
 
 function GetCharacter()
-   return Workspace.HelloJesus009.Pencil
+   return Workspace.Elekt0r.Pencil
 end
 
 function Teleport(pos)
