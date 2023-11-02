@@ -228,7 +228,7 @@ game:GetService("VirtualInputManager"):SendKeyEvent(true,Enum.KeyCode.One,false,
 end)
 
 
-window:Button("Invisible pencil",function() 
+window:Button("Invisible Pencil",function() 
 Workspace.9mmxp.Pencil.Blade:Destroy() 
 wait() 
 Workspace.9mmxp.Pencil.Handle:Destroy() 
@@ -294,7 +294,7 @@ window:Toggle("Target All (Void)",{location = Table, flag = "enable"},function()
     end
 end)
 
-window:Button("Quick God",function()
+window:Button("Quick God (Fixed!)",function()
 game:GetService("Players").LocalPlayer.Character.PickupRemote:FireServer()
 wait()
 game.Players.LocalPlayer.Character["Humanoid"]:Destroy()
