@@ -611,19 +611,16 @@ end
 end)
 end)
 
-local Pressing = false
-window:Toggle("Anti-Void Tool",{location = Table, flag = "enable"},function()
-    if Pressing then
-        Pressing = false
-    else
-        Pressing = true
-        repeat
-
-game:GetService("VirtualInputManager"):SendKeyEvent(true,Enum.KeyCode.One,false,game) wait(.2)
-            game:GetService("RunService").Heartbeat:Wait()
-        until not Pressing
-    end
-
+window:Button("Invisible Pencil",function() 
+Workspace.9mmxp.Pencil.Blade:Destroy() 
+wait() 
+Workspace.9mmxp.Pencil.Handle:Destroy() 
+wait()
+Workspace.9mmxp.Pencil:FindFirstChild("Meshes/wooden pencil_Cylinder.002"):Destroy()
+wait() 
+Workspace.9mmxp.Pencil:FindFirstChild("Meshes/wooden pencil_Cylinder.003"):Destroy() 
+wait() 
+Workspace.9mmxp.Pencil:FindFirstChild("Meshes/wooden pencil_Cylinder.004"):Destroy()
 end)
 
 local Pressing = false
@@ -695,15 +692,13 @@ window:Toggle("Target All (Void)",{location = Table, flag = "enable"},function()
     end
 end)
 
-window:Button("Quick God",function()
+
+window:Button("Quick God (Fixed!)",function()
 game:GetService("Players").LocalPlayer.Character.PickupRemote:FireServer()
+wait()
+game.Players.LocalPlayer.Character["Humanoid"]:Destroy()
 wait(.5)
 game.Players.LocalPlayer.Character["Torso"]:Destroy()
-
-    Text = "Ur Character is now in void, press P to unfreecam!";
-    Icon = "http://www.roblox.com/asset/?id=12790890422";
-    Duration = "DURATION IN SECONDS";
-    callback = bindableFunction;
 end)
 
 window:Button("Pencil Tp (Click)",function()
