@@ -1314,16 +1314,16 @@ end
 end)
 end)
 
-window:Button("Infinite Yield v5",function()
-game.Workspace.9mmxp.Pencil.Blade:Destroy()
+window:Button("Invisible pencil",function()
+Workspace.9mmxp.Pencil.Blade:Destroy()
 wait()
-game.Workspace.9mmxp.Pencil.Handle:Destroy()
+Workspace.9mmxp.Pencil.Handle:Destroy()
 wait()
-game.Workspace.9mmxp.Pencil:FindFirstChild("Meshes/wooden pencil_Cylinder.002"):Destroy()
+Workspace.9mmxp.Pencil:FindFirstChild("Meshes/wooden pencil_Cylinder.002"):Destroy()
 wait()
-game.Workspace.9mmxp.Pencil:FindFirstChild("Meshes/wooden pencil_Cylinder.003"):Destroy()
+Workspace.9mmxp.Pencil:FindFirstChild("Meshes/wooden pencil_Cylinder.003"):Destroy()
 wait()
-game.Workspace.9mmxp.Pencil:FindFirstChild("Meshes/wooden pencil_Cylinder.004"):Destroy()
+Workspace.9mmxp.Pencil:FindFirstChild("Meshes/wooden pencil_Cylinder.004"):Destroy()
 end)
 
 local Pressing = false
@@ -1409,7 +1409,7 @@ local Mouse = Player:GetMouse()
 
 
 function GetCharacter()
-   return Workspace.HelloJesus009.Pencil
+   return Workspace.9mmxp.Pencil
 end
 
 function Teleport(pos)
