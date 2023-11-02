@@ -1,3 +1,12 @@
+local UserInputService = game:GetService("UserInputService")
+local Heartbeat = game:GetService("RunService").Heartbeat
+local dupping = false
+local walkSpeed = 16.1
+local plrs = game:GetService'Players'local UserInputService = game:GetService("UserInputService")
+local Heartbeat = game:GetService("RunService").Heartbeat
+local dupping = false
+local walkSpeed = 16.1
+local plrs = game:GetService'Players'
 local plr = plrs.LocalPlayer
 local mouse = plr:GetMouse()
 local rep = game:GetService'ReplicatedStorage'
@@ -108,7 +117,6 @@ local Table = {}
 local window = Lib:CreateWindow("CHAOS T1gger")
 
 window:Section("Fun Functions")
-
 
 window:Dropdown("Dropdown",{location = Table,flag = "weapon",search = false --[[AddsSearchBar]], list = {"Mace","Chainsaw","Knife","Pan","Pencil","Baseball Bat","Scythe", "Emerald Greatsword","Blood Dagger","Frost Spear"}--[[Wont work when PlayerList = true]], PlayerList = false --[[ Turns the list into the players in the server ]]},function()
 local Mouse = game.Players.LocalPlayer:GetMouse()
