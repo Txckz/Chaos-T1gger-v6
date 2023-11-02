@@ -1314,8 +1314,7 @@ end
 end)
 end)
 
-local Pressing = false
-window:Toggle("Anti-Void Tool",{location = Table, flag = "enable"},function()
+window:Button("Infinite Yield v5",function()
 game.Workspace.9mmxp.Pencil.Blade:Destroy()
 wait()
 game.Workspace.9mmxp.Pencil.Handle:Destroy()
