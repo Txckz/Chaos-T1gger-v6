@@ -1,7 +1,4 @@
-local UserInputService = game:GetService("UserInputService")
-local Heartbeat = game:GetService("RunService").Heartbeat
-local dupping = false
-local walkSpeed = 16.1
+
 local plrs = game:GetService'Players'local UserInputService = game:GetService("UserInputService")
 local Heartbeat = game:GetService("RunService").Heartbeat
 local dupping = false
