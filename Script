@@ -116,14 +116,6 @@ local Table = {}
 
 local window = Lib:CreateWindow("CHAOS T1gger")
 
-game.StarterGui:SetCore("SendNotification", {
-    Title = "GUI";
-    Text = "Cargado con exito, bienvenido a la version mejorada!";
-    Icon = "http://www.roblox.com/asset/?id=12790890422";
-    Duration = 2;
-    callback = bindableFunction;
-})
- 
 window:Section("Target List")
 
 window:Dropdown("Select Target",{location = Table,flag = "player1",search = true --[[AddsSearchBar]], list = {"Mace","Chainsaw","Knife","Pan","Pencil","Baseball Bat","Scythe","Emerald Greatsword","Blood Dagger"} --[[Wont work when PlayerList = true]], PlayerList = true --[[ Turns the list into the players in the server ]]},function()game.StarterGui:SetCore("SendNotification", {
