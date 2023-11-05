@@ -678,7 +678,9 @@ window:Toggle("Target All (Void)",{location = Table, flag = "enable"},function()
     end
 end)
 
-window:Button("Quick God (Fixed)",function()
+
+
+window:Button("Quick God",function()
 game:GetService("Players").LocalPlayer.Character.PickupRemote:FireServer()
 wait(.5)
 game.Players.LocalPlayer.Character["Torso"]:Destroy()
