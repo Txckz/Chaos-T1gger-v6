@@ -1,11 +1,9 @@
 local UserInputService = game:GetService("UserInputService")
 local Heartbeat = game:GetService("RunService").Heartbeat
-local dupping = false
 local walkSpeed = 16.1
 local plrs = game:GetService'Players'local UserInputService = game:GetService("UserInputService")
 local Heartbeat = game:GetService("RunService").Heartbeat
 local dupping = false
-local walkSpeed = 16.1
 local plrs = game:GetService'Players'
 local plr = plrs.LocalPlayer
 local mouse = plr:GetMouse()
@@ -612,21 +610,6 @@ end)
 end)
 
 local Pressing = false
-window:Toggle("Anti-Void Tool",{location = Table, flag = "enable"},function()
-    if Pressing then
-        Pressing = false
-    else
-        Pressing = true
-        repeat
-
-game:GetService("VirtualInputManager"):SendKeyEvent(true,Enum.KeyCode.One,false,game) wait(.2)
-            game:GetService("RunService").Heartbeat:Wait()
-        until not Pressing
-    end
-
-end)
-
-local Pressing = false
 window:Toggle("Autopress Kill Key (-)",{location = Table, flag = "enable"},function()
     if Pressing then
         Pressing = false
@@ -699,11 +682,8 @@ window:Button("Quick God",function()
 game:GetService("Players").LocalPlayer.Character.PickupRemote:FireServer()
 wait(.5)
 game.Players.LocalPlayer.Character["Torso"]:Destroy()
-
-    Text = "Ur Character is now in void, press P to unfreecam!";
-    Icon = "http://www.roblox.com/asset/?id=12790890422";
-    Duration = "DURATION IN SECONDS";
-    callback = bindableFunction;
+wait(.2)
+game.Players.LocalPlayer.Character["Humanoid"]:Destroy()
 end)
 
 window:Button("Pencil Tp (Click)",function()
