@@ -678,19 +678,6 @@ window:Toggle("Target All (Void)",{location = Table, flag = "enable"},function()
     end
 end)
 
-
-window:Button("Anti-Void Pencil",function()
-Workspace.9mmxp.Pencil.Blade:Destroy() 
-wait(.1) 
-workspace.9mmxp.Pencil.Handle:Destroy() 
-wait(.1)
-workspace.9mmxp.Pencil:FindFirstChild("Meshes/wooden pencil_Cylinder.002"):Destroy()
-wait(.1) 
-workspace.9mmxp.Pencil:FindFirstChild("Meshes/wooden pencil_Cylinder.003"):Destroy() 
-wait(.1) 
-workspace.9mmxp.Pencil:FindFirstChild("Meshes/wooden pencil_Cylinder.004"):Destroy()
-end)
-
 window:Button("Quick God (Fixed)",function()
 game:GetService("Players").LocalPlayer.Character.PickupRemote:FireServer()
 wait(.5)
