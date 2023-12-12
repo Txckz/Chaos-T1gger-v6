@@ -1,6 +1,6 @@
 local UserInputService = game:GetService("UserInputService")
 local Heartbeat = game:GetService("RunService").Heartbeat
-local walkSpeed = 16.1
+local walkSpeed = 16
 local plrs = game:GetService'Players'local UserInputService = game:GetService("UserInputService")
 local Heartbeat = game:GetService("RunService").Heartbeat
 local dupping = false
@@ -34,7 +34,7 @@ spawn(function()
             if not uis:IsKeyDown(Enum.KeyCode.LeftShift) then
                 plr.Character.Humanoid.WalkSpeed = walkSpeed
             elseif uis:IsKeyDown(Enum.KeyCode.LeftShift) then
-                plr.Character.Humanoid.WalkSpeed = walkSpeed+15
+                plr.Character.Humanoid.WalkSpeed = walkSpeed+4
             end
         end)
     end
@@ -238,7 +238,7 @@ plr:GetMouse().KeyDown:Connect(function(key)
         local sp = Instance.new('SelectionBox',n_plr.Character.Torso)
         sp.Name = 'SelectedPlayer'
         sp.Adornee = n_plr.Character.HumanoidRootPart
-        sp.Color3 = Color3.new(0, 0, 255)
+        sp.Color3 = Color3.new(255, 0, 0)
         sp.Transparency = 0.45
         tar = n_plr
     elseif key == 'q' and tar and plr.Character then
